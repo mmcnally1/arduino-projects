@@ -23,7 +23,7 @@ D -- 'DI' --> I
 I -- 'DIM' --> M
 ```
 
-Since Morse Code encodes each letter as sequence of dots and dashes, we can use a Trie to efficiently store and lookup the encodings!
+Since Morse Code encodes each letter as sequence of dots and dashes, we can use a Trie to efficiently store and look up the encodings!
 ```mermaid
 graph TD;
 A['\0'] --> B[.]
@@ -79,3 +79,23 @@ X[-] --> AX[-]
 AX[-] --> AY[Y]
 AZ[.] --> BA[Z]
 ```
+
+Since we're just writing our code in C and not using any libraries, we can use an array to store the trie. The following code block takes the sequence input by the user and prints the corresponding character:
+  void decode() {
+  int index = 0;
+  int trieIndex = 0;
+  while (morse[index] != '\0') {
+    
+    // dot = left child
+    if (morse[index] == '.') {
+      trieIndex = (trieIndex * 2) + 1;
+    }
+    
+    // dash = right child
+    else if (morse[index] == '-') {
+      trieIndex = (trieIndex * 2) + 2;
+    }
+    index++;
+  }
+  Serial.print(trie[trieIndex]);
+}
