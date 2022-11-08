@@ -8,17 +8,17 @@ Morse code is a method of encoding characters using signal duration. It was comm
 A trie is a data structure used to store strings efficiently. Tries use a tree structure to store each character of a string such that the string associated with a given node is a common prefix shared by all of that node's children. The root of a Trie is the empty string, and each child of the root contains the first character of all strings on whose path it is the first node visited. A string can be retrieved from a Trie via a depth-first traversal until the entire string has been found. Here is a simple example of a Trie:
 ```mermaid
 graph TD;
-\0 -. 'B .-> B
-\0 --> D
-B --> E
-E --> A
-A --> R
-A --> T
-A --> N
-D --> O
-O --> G
-O --> C
-C --> K
-D --> I
-I --> M
+\0 -- 'B; --> B
+\0 -- 'D' --> D
+B -- 'BE' --> E
+E -- 'BEA' --> A
+A -- 'BEAR' --> R
+A -- 'BEAT' --> T
+A -- 'BEAN' --> N
+D -- 'DO' --> O
+O -- 'DOG' --> G
+O -- 'DOC' --> C
+C -- 'DOCK' --> K
+D -- 'DI' --> I
+I -- 'DIM' --> M
 ```
