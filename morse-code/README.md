@@ -27,6 +27,6 @@ Since Morse Code encodes each letter as sequence of dots and dashes, we can use 
 ```mermaid
 graph TD;
 \0 --> B[.]
-B[.] --> C[\emptyset]
+B[.] --> C[\0]
 
 ```
