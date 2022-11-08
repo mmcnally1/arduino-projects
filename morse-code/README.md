@@ -80,7 +80,7 @@ AX[-] --> AY[Y]
 AZ[.] --> BA[Z]
 ```
 
-Since we're just writing our code in C and not using any libraries, we can use an array to store the trie. The decode() function takes the sequence input by the user and prints the corresponding character:
+Since we're just writing our code in C and not using any libraries, we can use an array to store the trie. The decode() function takes the sequence input by the user (morse[]) and prints the corresponding character from the trie:
 ```
 void decode() {
   int index = 0;
