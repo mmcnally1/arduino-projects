@@ -102,7 +102,7 @@ void decode() {
 }
 ```
 ### Arduino
-Now that we have our concept and data structure fleshed out, we can start working with the Arduino. This project uses an Arduino Uno, which is a microcontroller board that uses the ATmega328p microcontroller. It has 14 digital I/O pins and 6 analog input pins. Some of the pins serve special purposes, such as the SCL and SDA pins, which can be used for I2C data transfer between devices. The full Arduino pinout diagram is shown below:
+Now that we have our concept and data structure taken care of, we can start working with the Arduino. This project uses an Arduino Uno, which is a microcontroller board that uses the ATmega328p microcontroller. It has 14 digital I/O pins and 6 analog input pins. Some of the pins serve special purposes, such as the SCL and SDA pins, which can be used for I2C data transfer between devices. The full Arduino pinout diagram is shown below:
 <img src="arduino-pinout.png">
 
 In addition to its various I/O pins, the Arduino has many internal registers that communicate with the pins, serve as timers and counters, and allow us to specify things such as clock speed and pulse width modulation. For this project we will need to interact with the Timer/Control counter register B (TCCR1b), the Timer Interrupt Mask Register (TIMSK1), the Timer Interrupt Flag Register (TIFR1), and the Timer Counter 1 (TCNT1). TCNT1 holds the current timer count, which we can use to track whether a dot or a dash was input by the user. TCNT1 is a 16-bit register and the Arduino system clock runs at 16MHZ, so the timer will turn over 256 times per second. This is much too fast for us to do anything useful with, so in the following code block we use TCCR1b to prescale (slow down) the system clock by a factor of 256. 
