@@ -26,6 +26,6 @@ I -- 'DIM' --> M
 Since Morse Code encodes each letter as sequence of dots and dashes, we can use a Trie to efficiently store and lookup the encodings!
 ```mermaid
 graph TD;
-\0 ----> B[.]
-C[.] --> D[-]
+A[\0] ----> B[.]
+B[.] --> D[-]
 ```
