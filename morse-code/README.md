@@ -81,7 +81,8 @@ AZ[.] --> BA[Z]
 ```
 
 Since we're just writing our code in C and not using any libraries, we can use an array to store the trie. The following code block takes the sequence input by the user and prints the corresponding character:
-  void decode() {
+```
+void decode() {
   int index = 0;
   int trieIndex = 0;
   while (morse[index] != '\0') {
@@ -99,3 +100,4 @@ Since we're just writing our code in C and not using any libraries, we can use a
   }
   Serial.print(trie[trieIndex]);
 }
+```
