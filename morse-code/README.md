@@ -112,7 +112,7 @@ In addition to its various I/O pins, the Arduino has many internal registers tha
   TCCR1B &= ~(1 << CS10);
 ```
 
-This means the timer will fill up once per second, which gives us plenty of time to distinguish between a dot and a dash. We also want to enable input capture interrupt, which allows us to specify the handler function when the user pushes or releases the push-button, and timer oveflow interrupt, so we can detect a space between letters if the timer overflows (which indicates that the button has not been pushed for a second).
+This means the timer will fill up once per second, which gives us plenty of time to distinguish between a dot and a dash. We also want to enable input capture interrupt, which allows us to specify a handler function that will be called when the user pushes or releases the push-button, and timer oveflow interrupt, so we can detect a space between letters if the timer overflows (which indicates that the button has not been pushed for a second).
 The following code does this:
 ```
   // Set input capture select to falling edge
