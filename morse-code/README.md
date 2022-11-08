@@ -9,9 +9,12 @@ A trie is a data structure used to store strings efficiently. Tries use a tree s
 ```mermaid
 graph TD;
 \0 --> B
+/0 --> D
 B --> E
 E --> A
 A --> R
 A --> T
 A --> N
+D --> O
+O --> G
 ```
