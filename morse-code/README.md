@@ -12,5 +12,6 @@ graph TD;
 B --> E
 E --> A
 A --> R
-E --> E
+A --> T
+B --> O
 ```
