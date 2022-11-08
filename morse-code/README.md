@@ -10,4 +10,7 @@ A trie is a data structure used to store strings efficiently. Tries use a tree s
 graph TD;
 \0 --> A
 \0 --> B
+A --> R
+R --> T
+R --> C
 ```
