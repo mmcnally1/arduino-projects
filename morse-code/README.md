@@ -190,4 +190,4 @@ ISR(TIMER1_OVF_vect) {
 ```
 
 As far as actually wiring the circuit, we only need a breadboard, a pushbutton, a 10K ohm resistor, and a wire each to connect the pushbutton to power, ground, and the input pin (in this case it is digital pin 8 or PB0). The circuit is shown below:
-<img src="wired-circuit.jpg"
+<img src="wired-circuit.jpg">
